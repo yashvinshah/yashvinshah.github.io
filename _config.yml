@@ -1,0 +1,148 @@
+# ============================================================
+#  Site Settings
+#  Replace every value marked with [PLACEHOLDER] with yours.
+# ============================================================
+
+title                    : "[YOUR_NAME]"          # Displayed in browser tab
+description              : ""
+repository               : "YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io"
+google_scholar_stats_use_cdn : true
+
+# Google Analytics (optional — delete the line to disable)
+google_analytics_id      :  # e.g., "G-XXXXXXXXXX"
+
+# SEO verification tags (optional)
+google_site_verification :
+bing_site_verification   :
+baidu_site_verification  :
+
+# ============================================================
+#  Author / Sidebar Profile
+# ============================================================
+author:
+  name             : "[YOUR_NAME]"
+  avatar           : "images/avatar.jpg"          # Put your photo at images/avatar.jpg
+  bio              : "Your one-line personal motto or research statement."
+  location         : "City, Country"
+  employer         :
+  pubmed           :
+  googlescholar    : ""   # e.g., "https://scholar.google.com/citations?user=XXXX"
+  email            : ""   # e.g., "you@university.edu"
+  researchgate     :      # e.g., "https://www.researchgate.net/profile/yourprofile"
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           :      # e.g., "yourgithubusername"
+  google_plus      :
+  keybase          :
+  instagram        :
+  impactstory      :
+  lastfm           :
+  linkedin         :      # e.g., "your-linkedin-slug"
+  dblp             :      # e.g., "https://dblp.org/pid/xx/xxxx.html"
+  orcid            :      # e.g., "https://orcid.org/0000-0000-0000-0000"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    :
+  steam            :
+  tumblr           :
+  twitter          :
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
+  wikipedia        :
+
+
+# ============================================================
+#  Jekyll / Build Settings  (usually no need to change)
+# ============================================================
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - docs
+  - google_scholar_crawler
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - .github
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - config
+  - gulpfile.js
+  - log
+  - node_modules
+  - package.json
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+      author_profile: true
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+permalink: /:categories/:title/
+timezone: America/New_York   # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

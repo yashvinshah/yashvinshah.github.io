@@ -1,0 +1,27 @@
+main:
+  - title: "About Me"
+    url: "#about-me"
+
+  - title: "Education"
+    url: "#educations"
+
+  - title: "Publications"
+    url: "#publications"
+
+  - title: "Internships"
+    url: "#internship-experiences"
+
+  - title: "Projects"
+    url: "#selected-projects"
+
+  - title: "Reviewer"
+    url: "#journal-reviewer"
+
+  - title: "Presentations"
+    url: "#conference-presentations"
+
+  - title: "Awards"
+    url: "#honors-and-awards"
+
+  - title: "Reading"
+    url: "#reading-list"
