@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Hello, I'm [YOUR_NAME]"
+title: "Hey, I'm Yashvi Shah"
 excerpt: ""
 author_profile: true
 redirect_from: 
@@ -17,37 +17,64 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# 👋 Hello, I'm [YOUR_NAME]
+# Hey, I'm Yashvi!
 
-🎓 I'm a [Ph.D. student / Researcher / Professor] at [[Your University](https://your-university.edu/)]
-
-🔬 My research focuses on **[Your Research Area]** (e.g., Computer Vision, Robotics, NLP).
+🎓 A 2nd year MS student / Researcher at [[NC State University](https://www.ncsu.edu/)]
+🔬 From optimizing ML pipelines to building systems, I enjoy solving problems where intelligence, scale and reliability intersect. I have worked acorss AI/ML, Deep learning, NLP, Computer Vision, and Data Systems turning research and raw data into real world solutions.
 
 ✉️ Contact me:  
-Email: [your.email@university.edu]  
-LinkedIn: [[Your Name](https://linkedin.com/in/your-profile)]
+Email: yashviishah03@gmail.com  
+LinkedIn: [[Yashvi Shah](https://www.linkedin.com/in/yashvi-shah-b35071252/)]
 
 <!-- TIP: Add a short paragraph describing your research interest and goals. -->
 
-<span class='anchor' id='news'></span>
+<!-- <span class='anchor' id='news'></span>
 
 # 🔥 News
 - *Month YYYY* — [Brief news item, e.g., paper accepted at Conference X]
-- *Month YYYY* — [Another news item]
+- *Month YYYY* — [Another news item] -->
 
 <span class='anchor' id='educations'></span>
 
 # 📖 Educations
 
-- *Aug 20XX – Present*, [[University Name](https://your-university.edu/)], City, Country
-  - [Degree] in [Field]
+- *Aug 2025 – Present*, [[NC State University](https://www.ncsu.edu/)], Raleigh, USA
+  - [Master's] in [Computer Science]
 
-- *Aug 20XX – May 20XX*, [[University Name](https://your-university.edu/)], City, Country
-  - [Degree] in [Field]
+- *Jan 2022 – May 2025*, [[DJ Sanghvi College of Engineering, University of Mumbai](https://www.djsce.ac.in/)], Mumbai, India
+  - [B. Tech] in [Artificial Intelligence and Data Science with Honors in Computational Biology]
 
 <span class='anchor' id='publications'></span>
 
-# 📝 Publications
+
+# Experience
+
+<!-- ── Experience card ──────────────────────────────────────────── -->
+<!-- Steps:
+     1. Add a company logo or relevant photo to images/.
+     2. Fill in the dates, company, location, and bullet points.
+     Duplicate this block for each role.                           -->
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <img src='images/company-logo.png' alt="Company Name" width="100%">
+    </div>
+  </div>
+<div class='paper-box-text' markdown="1">
+
+- *Month YYYY – Month YYYY*, [[Company Name](https://company-website.com)], City, Country  
+  **Your Role / Title**
+- Brief description of the role or project.
+  - Key achievement or responsibility 1
+  - Key achievement or responsibility 2
+
+</div>
+</div>
+
+<span class='anchor' id='selected-projects'></span>
+
+# Publications
 
 <!-- ── Plain-text publication (no figure) ────────────────────────── -->
 <!-- Duplicate this block for each paper without an image. -->
@@ -86,34 +113,8 @@ LinkedIn: [[Your Name](https://linkedin.com/in/your-profile)]
 
 <span class='anchor' id='internship-experiences'></span>
 
-# 💻 Experience
 
-<!-- ── Experience card ──────────────────────────────────────────── -->
-<!-- Steps:
-     1. Add a company logo or relevant photo to images/.
-     2. Fill in the dates, company, location, and bullet points.
-     Duplicate this block for each role.                           -->
-
-<div class='paper-box'>
-  <div class='paper-box-image'>
-    <div>
-      <img src='images/company-logo.png' alt="Company Name" width="100%">
-    </div>
-  </div>
-<div class='paper-box-text' markdown="1">
-
-- *Month YYYY – Month YYYY*, [[Company Name](https://company-website.com)], City, Country  
-  **Your Role / Title**
-- Brief description of the role or project.
-  - Key achievement or responsibility 1
-  - Key achievement or responsibility 2
-
-</div>
-</div>
-
-<span class='anchor' id='selected-projects'></span>
-
-# 🚀 Selected Projects
+# Projects
 
 <!-- ── Project card ─────────────────────────────────────────────── -->
 <!-- Steps:
@@ -144,7 +145,7 @@ LinkedIn: [[Your Name](https://linkedin.com/in/your-profile)]
 
 <span class='anchor' id='conference-presentations'></span>
 
-# 🎤 Conference Presentations
+<!-- # 🎤 Conference Presentations
 - *Month. YYYY*, [Conference Name](https://conference-url.com), City, Country
 
 <span class='anchor' id='honors-and-awards'></span>
@@ -152,9 +153,9 @@ LinkedIn: [[Your Name](https://linkedin.com/in/your-profile)]
 # 🏆 Honors and Awards
 - *Month YYYY*, Award Name, Institution / Organization
 
-<span class='anchor' id='reading-list'></span>
+<span class='anchor' id='reading-list'></span> -->
 
-# 📚 Reading List
+<!-- # 📚 Reading List
 
 <!-- ── Book shelf ──────────────────────────────────────────────── -->
 <!-- This section renders a visual book grid.
@@ -205,4 +206,4 @@ LinkedIn: [[Your Name](https://linkedin.com/in/your-profile)]
 </div>
 
 </div>
-</div>
+</div> -->
