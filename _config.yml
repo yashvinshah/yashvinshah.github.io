@@ -3,9 +3,9 @@
 #  Replace every value marked with [PLACEHOLDER] with yours.
 # ============================================================
 
-title                    : "[YOUR_NAME]"          # Displayed in browser tab
+title                    : "Yashvi Shah"          # Displayed in browser tab
 description              : ""
-repository               : "YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io"
+repository               : "yashvinshah/yashvinshah.github.io"
 google_scholar_stats_use_cdn : true
 
 # Google Analytics (optional — delete the line to disable)
@@ -20,14 +20,14 @@ baidu_site_verification  :
 #  Author / Sidebar Profile
 # ============================================================
 author:
-  name             : "[YOUR_NAME]"
+  name             : "Yashvi Shah"
   avatar           : "images/avatar.jpg"          # Put your photo at images/avatar.jpg
   bio              : "Your one-line personal motto or research statement."
-  location         : "City, Country"
+  location         : "Raleigh, NC, USA"
   employer         :
   pubmed           :
-  googlescholar    : ""   # e.g., "https://scholar.google.com/citations?user=XXXX"
-  email            : ""   # e.g., "you@university.edu"
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=q8SpPsYAAAAJ"   # e.g., "https://scholar.google.com/citations?user=XXXX"
+  email            : "yashviishah03@gmail.com"   # e.g., "you@university.edu"
   researchgate     :      # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -36,15 +36,15 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :      # e.g., "yourgithubusername"
+  github           : "yashvinshah"     # e.g., "yourgithubusername"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      :
   lastfm           :
-  linkedin         :      # e.g., "your-linkedin-slug"
+  linkedin         : "yashvi-shah-b35071252"     # e.g., "your-linkedin-slug"
   dblp             :      # e.g., "https://dblp.org/pid/xx/xxxx.html"
-  orcid            :      # e.g., "https://orcid.org/0000-0000-0000-0000"
+  orcid            : "https://orcid.org/0009-0005-2379-4135"     # e.g., "https://orcid.org/0000-0000-0000-0000"
   pinterest        :
   soundcloud       :
   stackoverflow    :
