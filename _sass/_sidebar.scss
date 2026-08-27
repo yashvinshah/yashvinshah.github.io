@@ -11,17 +11,14 @@
           transform: translate3d(0, 0 , 0);
 
   @include clearfix();
-  margin-bottom: 1em;
+  margin-bottom: 0;
+  float: none;
+  width: 100%;
 
   @include breakpoint($large) {
-    @include span(2 of 12);
+    float: none;
+    width: 100%;
     opacity: 1;
-    -webkit-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 
 
@@ -45,7 +42,8 @@
   }
 
   img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
   }
 }
 
@@ -69,9 +67,6 @@
    Author profile and links
    ========================================================================== */
 .profile_box{
-  @include breakpoint($large) {
-    display: block;
-  }
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
@@ -82,8 +77,7 @@
   display: table-cell;
   vertical-align: top;
   width: 75px;
-  // set width only, for non-square avatars
-  // height: 36px;
+  flex-shrink: 0;
 
   @include breakpoint($large) {
     display: block;
@@ -92,13 +86,13 @@
   }
 
   img {
-    max-width: 175px;
+    max-width: 140px;
     min-width: 75px;
     border-radius: 50%;
 
     @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
+      padding: 0;
+      border: 0;
     }
   }
 }
@@ -108,7 +102,6 @@
   vertical-align: top;
   padding-left: 10px;
   min-width: 120px;
-  // padding-right: 25px;
   line-height: 1;
 
   @include breakpoint($large) {
@@ -129,11 +122,8 @@
 }
 
 .sidebar .author__name {
-  @include breakpoint($medium) {
-    font-size: $type-size-3;
-  }
-  font-family: $sans-serif;
-  font-size: $type-size-4;
+  font-family: $serif-display;
+  font-size: $type-size-3;
 }
 
 .author__bio {
