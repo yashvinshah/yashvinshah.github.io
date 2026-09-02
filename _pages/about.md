@@ -170,38 +170,11 @@ As a Data Analyst Intern, I worked with the data analysis team to automate recur
      3. Replace the link and author list.
      Duplicate this block for each paper.                           -->
 
-<div class='paper-box pub-box'>
-  <div class='paper-box-image'>
-    <div>
-      <img src='images/ieee.webp' alt="IEEE" width="100%">
-    </div>
-  </div>
-  <div class='pub-title'><a href="https://ieeexplore.ieee.org/abstract/document/11203643">Attention-based Anomaly Detection using hybrid models in Multivariate Time Series Data</a></div>
-  <div class='pub-venue'>International Conference on Artificial Intelligence and Machine Vision (AIMV), 2025</div>
-  <div class='pub-desc'>Built a hybrid model of deep learning based on CNN, LSTM, TCN, and an attention mechanism to detect rare/faint anomalies in multivariate timeseries data.</div>
-</div>
+<div class='paper-box pub-box'><div class='pub-head'><div class='paper-box-image'><div><img src='images/ieee.webp' alt="IEEE" width="100%"></div></div><div class='pub-title'><a href="https://ieeexplore.ieee.org/abstract/document/11203643">Attention-based Anomaly Detection using hybrid models in Multivariate Time Series Data</a></div></div><div class='pub-venue'>International Conference on Artificial Intelligence and Machine Vision (AIMV), 2025</div><div class='pub-desc'>Built a hybrid model of deep learning based on CNN, LSTM, TCN, and an attention mechanism to detect rare/faint anomalies in multivariate timeseries data.</div></div>
 
-<div class='paper-box pub-box'>
-  <div class='paper-box-image'>
-    <div>
-      <img src='images/grenze.jpg' alt="Grenze" width="100%">
-    </div>
-  </div>
-  <div class='pub-title'><a href="https://thegrenze.com/abstract/journal/3760">BotLand: Tailoring LLaMA Language Model for Customised Chat</a></div>
-  <div class='pub-venue'>Grenze International Journal of Engineering & Technology (GIJET), 2025</div>
-  <div class='pub-desc'>Developed a personalised, curriculum-aware chatbot using LLaMA and information retrieval to answer ICSE students’ questions across Grades 6–9, combining text book knowledge with natural language for better understanding.</div>
-</div>
+<div class='paper-box pub-box'><div class='pub-head'><div class='paper-box-image'><div><img src='images/grenze.jpg' alt="Grenze" width="100%"></div></div><div class='pub-title'><a href="https://thegrenze.com/abstract/journal/3760">BotLand: Tailoring LLaMA Language Model for Customised Chat</a></div></div><div class='pub-venue'>Grenze International Journal of Engineering & Technology (GIJET), 2025</div><div class='pub-desc'>Developed a personalised, curriculum-aware chatbot using LLaMA and information retrieval to answer ICSE students’ questions across Grades 6–9, combining text book knowledge with natural language for better understanding.</div></div>
 
-<div class='paper-box pub-box'>
-  <div class='paper-box-image'>
-    <div>
-      <img src='images/springer.jpg' alt="Springer" width="100%">
-    </div>
-  </div>
-  <div class='pub-title'><a href="https://link.springer.com/chapter/10.1007/978-981-96-6250-0_42">Benchmarking Large Language Models: A Comprehensive Comparison of Architectures and Their Implications</a></div>
-  <div class='pub-venue'>Congress on Smart Computing Technologies, 2024</div>
-  <div class='pub-desc'>Conducted a comparative analysis of various LLMs to understand their capabilities, use cases, and strengths. The study helped identify the most suitable model for the BotLand project.</div>
-</div>
+<div class='paper-box pub-box'><div class='pub-head'><div class='paper-box-image'><div><img src='images/springer.jpg' alt="Springer" width="100%"></div></div><div class='pub-title'><a href="https://link.springer.com/chapter/10.1007/978-981-96-6250-0_42">Benchmarking Large Language Models: A Comprehensive Comparison of Architectures and Their Implications</a></div></div><div class='pub-venue'>Congress on Smart Computing Technologies, 2024</div><div class='pub-desc'>Conducted a comparative analysis of various LLMs to understand their capabilities, use cases, and strengths. The study helped identify the most suitable model for the BotLand project.</div></div>
 
 <span class='anchor' id='selected-projects'></span>
 
