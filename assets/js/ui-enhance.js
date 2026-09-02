@@ -230,11 +230,198 @@
     };
   }
 
+  function firstCompanyLink(textEl, title) {
+    var found = null;
+    Array.prototype.forEach.call(textEl.querySelectorAll('a'), function (a) {
+      if (!found && textOf(a) === title) found = a;
+    });
+    return found;
+  }
+
+  function unwrapLinks(root) {
+    Array.prototype.forEach.call(root.querySelectorAll('a'), function (a) {
+      var text = document.createTextNode(a.textContent);
+      if (a.parentNode) a.parentNode.replaceChild(text, a);
+    });
+  }
+
+  function isProjectTag(t) {
+    return /^hackathon\s+projects?$/i.test(t || '');
+  }
+
+  function stripProjectTitleFromBody(body, title) {
+    var strong = body.querySelector('strong');
+    if (strong) {
+      var name = textOf(strong).replace(/^\[|\]$/g, '');
+      if (name === title) {
+        var parent = strong.parentNode;
+        parent.removeChild(strong);
+        if (parent.tagName === 'LI') {
+          var list = parent.parentNode;
+          if (list && list.children.length === 1) {
+            while (parent.firstChild) {
+              list.parentNode.insertBefore(parent.firstChild, list);
+            }
+            list.parentNode.removeChild(list);
+          }
+        }
+      } else {
+        strong.textContent = name;
+      }
+    }
+    Array.prototype.forEach.call(body.querySelectorAll('p, em'), function (el) {
+      if (isProjectTag(textOf(el)) && el.parentNode) el.parentNode.removeChild(el);
+    });
+  }
+
+  function extractProjectInfo(textEl) {
+    var title = '';
+    var strong = textEl.querySelector('strong');
+    if (strong) title = textOf(strong).replace(/^\[|\]$/g, '');
+
+    var tag = '';
+    Array.prototype.forEach.call(textEl.querySelectorAll('p, em'), function (el) {
+      var t = textOf(el);
+      if (!tag && isProjectTag(t)) tag = t.replace(/Project$/i, 'project');
+    });
+
+    var summary = '';
+    var firstLi = textEl.querySelector('li');
+    if (firstLi) {
+      var clone = firstLi.cloneNode(true);
+      Array.prototype.forEach.call(clone.querySelectorAll('ul, ol, table, strong, a'), function (n) {
+        if (n.parentNode) n.parentNode.removeChild(n);
+      });
+      summary = textOf(clone);
+      if (isProjectTag(summary)) summary = '';
+    }
+    if (!summary) {
+      Array.prototype.forEach.call(textEl.querySelectorAll('p'), function (p) {
+        var t = textOf(p);
+        if (!summary && t && t.indexOf('·') === -1 && !isProjectTag(t)) summary = t;
+      });
+    }
+
+    var links = [];
+    Array.prototype.forEach.call(textEl.querySelectorAll('a'), function (a) {
+      var label = textOf(a);
+      var href = a.getAttribute('href') || '';
+      if (
+        /^(github|demo|code|live|website|poster|presentation slides)$/i.test(label) ||
+        /github\.com|gitlab\.com|drive\.google|canva\.com/.test(href)
+      ) {
+        links.push(a);
+      }
+    });
+
+    return {
+      title: title || 'Project',
+      tag: tag,
+      summary: summary,
+      links: links
+    };
+  }
+
   function enhancePaperBoxes() {
     document.querySelectorAll('.paper-box').forEach(function (card) {
       var imageWrap = card.querySelector('.paper-box-image');
       var textEl = card.querySelector('.paper-box-text');
       if (!textEl) return;
+
+      if (card.classList.contains('project-box')) {
+        var proj = extractProjectInfo(textEl);
+        var preview = document.createElement('div');
+        preview.className = 'card-preview';
+
+        var copy = document.createElement('div');
+        copy.className = 'card-preview__copy';
+
+        var title = document.createElement('h3');
+        title.className = 'card-preview__title';
+        var titleName = document.createElement('span');
+        titleName.textContent = proj.title;
+        title.appendChild(titleName);
+        if (proj.tag) {
+          var tag = document.createElement('span');
+          tag.className = 'card-preview__tag';
+          tag.textContent = proj.tag;
+          title.appendChild(tag);
+        }
+        copy.appendChild(title);
+
+        if (proj.summary) {
+          var summary = document.createElement('p');
+          summary.className = 'card-preview__summary';
+          summary.textContent = proj.summary;
+          copy.appendChild(summary);
+        }
+
+        var footer = document.createElement('div');
+        footer.className = 'card-preview__footer';
+
+        if (proj.links.length) {
+          var linksWrap = document.createElement('div');
+          linksWrap.className = 'card-preview__links';
+          proj.links.forEach(function (src) {
+            var a = src.cloneNode(true);
+            a.setAttribute('target', '_blank');
+            a.setAttribute('rel', 'noopener noreferrer');
+            linksWrap.appendChild(a);
+          });
+          footer.appendChild(linksWrap);
+        }
+
+        var cta = document.createElement('span');
+        cta.className = 'card-preview__cta';
+        cta.textContent = 'Read more →';
+        footer.appendChild(cta);
+        copy.appendChild(footer);
+        preview.appendChild(copy);
+
+        if (imageWrap && imageWrap.parentNode) imageWrap.parentNode.removeChild(imageWrap);
+        card.insertBefore(preview, textEl);
+        card.classList.add('is-compact', 'is-project');
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', 'Open details for ' + proj.title);
+
+        card.addEventListener('click', function (e) {
+          if (e.target.closest && e.target.closest('a')) return;
+          openModal(card, proj);
+        });
+        card.addEventListener('keydown', function (e) {
+          if (e.target.closest && e.target.closest('a')) return;
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openModal(card, proj);
+          }
+        });
+        return;
+      }
+
+      if (card.querySelector('.badge')) {
+        card.classList.add('is-full');
+        var badge = card.querySelector('.badge');
+        var titleLink = textEl.querySelector('a');
+        var descSource = textEl.querySelector('li');
+        var descHtml = descSource ? descSource.innerHTML : '';
+
+        var titleWrap = document.createElement('div');
+        titleWrap.className = 'pub-title';
+        if (titleLink) titleWrap.appendChild(titleLink);
+
+        var descWrap = document.createElement('div');
+        descWrap.className = 'pub-desc';
+        descWrap.innerHTML = descHtml;
+
+        if (badge.parentNode) badge.parentNode.removeChild(badge);
+        if (textEl.parentNode) textEl.parentNode.removeChild(textEl);
+
+        card.appendChild(titleWrap);
+        card.appendChild(badge);
+        card.appendChild(descWrap);
+        return;
+      }
 
       var info = extractPreview(card);
       var preview = document.createElement('div');
@@ -246,7 +433,16 @@
       copy.className = 'card-preview__copy';
       var title = document.createElement('h3');
       title.className = 'card-preview__title';
-      title.textContent = info.title;
+      var companyLink = firstCompanyLink(textEl, info.title);
+      if (companyLink) {
+        var linkedName = companyLink.cloneNode(true);
+        linkedName.className = 'card-preview__company';
+        linkedName.setAttribute('target', '_blank');
+        linkedName.setAttribute('rel', 'noopener noreferrer');
+        title.appendChild(linkedName);
+      } else {
+        title.textContent = info.title;
+      }
       copy.appendChild(title);
       if (info.subtitle) {
         var sub = document.createElement('p');
@@ -272,10 +468,12 @@
       card.setAttribute('tabindex', '0');
       card.setAttribute('aria-label', 'Open details for ' + info.title);
 
-      card.addEventListener('click', function () {
+      card.addEventListener('click', function (e) {
+        if (e.target.closest && e.target.closest('a')) return;
         openModal(card, info);
       });
       card.addEventListener('keydown', function (e) {
+        if (e.target.closest && e.target.closest('a')) return;
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           openModal(card, info);
@@ -317,15 +515,27 @@
     var detail = card.querySelector('.paper-box-text');
 
     head.innerHTML = '';
-    if (img) {
+    if (img && !card.classList.contains('is-project')) {
       var cloneImg = img.cloneNode(true);
       head.appendChild(cloneImg);
     }
     var h = document.createElement('h2');
     h.textContent = info.title;
     head.appendChild(h);
+    if (info.tag) {
+      var tagEl = document.createElement('span');
+      tagEl.className = 'card-preview__tag';
+      tagEl.textContent = info.tag;
+      h.appendChild(document.createTextNode(' '));
+      h.appendChild(tagEl);
+    }
 
     body.innerHTML = detail ? detail.innerHTML : '';
+    if (card.classList.contains('is-project')) {
+      stripProjectTitleFromBody(body, info.title);
+    } else {
+      unwrapLinks(body);
+    }
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');

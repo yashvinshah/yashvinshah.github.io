@@ -40,7 +40,7 @@ LinkedIn: [[Yashvi Shah](https://www.linkedin.com/in/yashvi-shah-b35071252/)]
 # Education
 
 - *Aug 2025 – Present*, [[NC State University](https://www.ncsu.edu/)], Raleigh, USA
-  - Master's in Computer Science
+  - Master's Degree, Computer Science (MCS)
 
 - *Jan 2022 – May 2025*, [[DJ Sanghvi College of Engineering, University of Mumbai](https://www.djsce.ac.in/)], Mumbai, India
   - B. Tech in Artificial Intelligence and Data Science with Honors in Computational Biology
@@ -64,22 +64,26 @@ LinkedIn: [[Yashvi Shah](https://www.linkedin.com/in/yashvi-shah-b35071252/)]
 
   <div class='paper-box-text' markdown="1">
 
-**NC State University**, Raleigh, USA
+**[NC State University](https://www.ncsu.edu/)**, Raleigh, USA
 
 **Graduate Research Assistant**  
 *August 2025 – Present*
 
 **iEXCEL Lab — Dr. Aditi Mallavarapu**  
 *August 2026 – Present*
+I currently contribute to interdisciplinary research projects spanning computer vision, ecological networks, graph machine learning, and research analytics across multiple projects.
 
-- Description of research/project.
-- Key achievement or responsibility.
+- Contribute to the development and deployment of a large-scale ecological platform powered by crowdsourced iNaturalist observations. Working across backend/frontend integration, CI/CD, data validation, and expert evaluation, while developing a Graph Neural Network (GNN) to validate trophic interactions within large-scale food webs.
+- Another project involves collaborating with the University Libraries and Ecology department to analyze research collaboration patterns across NC State using large-scale publication data.
+- Mentor undergraduate researchers across projects and provide technical guidance.
 
 **IEC Lab — Dr. Noboru Matsuda**  
 *August 2025 – May 2026*
 
-- Description of research/project.
-- Key achievement or responsibility.
+In my first year, I worked on research at the intersection of learning science, cognitive science, and artificial intelligence, developing computational methods to understand student learnings.
+
+- We analyzed student responses from multiple courses to evaluate response accuracy and identify patterns in student understanding. Applied Item Response Theory (IRT), machine learning, and LLM-based analysis to identify misconceptions, knowledge gaps, and areas where students struggled.
+- Also developed and improved an automatic depth-perception pipeline for a packaging robot, using computer vision techniques to correct depth estimation and improve the reliability of automated object handling.
 
 </div>
 </div>
@@ -94,7 +98,7 @@ LinkedIn: [[Yashvi Shah](https://www.linkedin.com/in/yashvi-shah-b35071252/)]
 
   <div class='paper-box-text' markdown="1">
 
-**Ornamental Plant Breeding Lab, NCSU**
+**[Ornamental Plant Breeding Lab, NCSU](https://www.ncsu.edu/)**
 
 **Summer Intern**, Raleigh, USA
 
@@ -111,7 +115,7 @@ LinkedIn: [[Yashvi Shah](https://www.linkedin.com/in/yashvi-shah-b35071252/)]
 <div class='paper-box'>
   <div class='paper-box-image'>
     <div>
-      <img src='images/capg logo.png' alt="Capgemini" width="100%">
+      <img src='images/capg.jpg' alt="Capgemini" width="100%">
     </div>
   </div>
 <div class='paper-box-text' markdown="1">
@@ -166,16 +170,50 @@ As a Data Analyst Intern, I worked with the data analysis team to automate recur
   <div class='paper-box-image'>
     <div>
       <div class="badge">International Conference on Artificial Intelligence and Machine Vision (AIMV), 2025</div>
-      <img src='images/ieee.png' alt="paper preview" width="100%">
+      <img src='images/ieee.webp' alt="paper preview" width="100%">
     </div>
   </div>
 <div class='paper-box-text' markdown="1">
 
 [Attention-based Anomaly Detection using hybrid models in Multivariate Time Series Data](https://ieeexplore.ieee.org/abstract/document/11203643)
 
-**[Yashvi Shah]**, Achintya Shah, Drashti Shah, Dhruvi Doshi, Deepali Patil<sup>*</sup>
+<!-- **[Yashvi Shah]**, ...Deepali Patil<sup>*</sup> -->
 
 - Built a hybrid model of deep learning based on CNN, LSTM,TCN, and an attention mechanism to detect rare/faint anomalies in multivariate timeseries data.  
+</div>
+</div>
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">Grenze International Journal of Engineering & Technology (GIJET), 2025</div>
+      <img src='images/grenze.jpg' alt="paper preview" width="100%">
+    </div>
+  </div>
+<div class='paper-box-text' markdown="1">
+
+[BotLand: Tailoring LLaMA Language Model for Customised Chat](https://thegrenze.com/abstract/journal/3760)
+
+<!-- Achintya Shah,**[Yashvi Shah]**, ...Sudhir Dhekane<sup>*</sup> -->
+
+- Developed a personalised, curriculum-aware chatbot using LLaMA and information retrieval to answer ICSE students’ questions across Grades 6–9, combining text book knowledge with natural language for better understanding. 
+</div>
+</div>
+
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge">Congress on Smart Computing Technologies, 2024</div>
+      <img src='images/springer.jpg' alt="paper preview" width="100%">
+    </div>
+  </div>
+<div class='paper-box-text' markdown="1">
+
+[Benchmarking Large Language Models: A Comprehensive Comparison of Architectures and Their Implications](https://link.springer.com/chapter/10.1007/978-981-96-6250-0_42)
+
+<!-- **[Yashvi Shah]**, Achintya Shah, Drashti Shah, Dhruvi Doshi, Deepali Patil<sup>*</sup> -->
+
+- Conducted a comparative analysis of various LLMs to understand their capabilities, use cases, and strengths. The study helped identify the most suitable model for the BotLand project.
 </div>
 </div>
 
@@ -185,23 +223,95 @@ As a Data Analyst Intern, I worked with the data analysis team to automate recur
 
 <!-- ── Project card ─────────────────────────────────────────────── -->
 <!-- Steps:
-     1. Add a screenshot or demo GIF to images/.
-     2. Describe the project in bullet points.
+     1. Title, one-line summary, optional GitHub/Demo links.
+     2. Extra detail (tech stack, longer description) appears in Read more.
      Duplicate this block for each project.                        -->
 
-<div class='paper-box'>
-  <div class='paper-box-image'>
-    <div>
-      <img src='images/project-screenshot.png' alt="Project Name" width="100%">
-    </div>
-  </div>
+<div class='paper-box project-box'>
 <div class='paper-box-text' markdown="1">
 
-- **[Project Name]**
-  - What the project does and why it matters.
-  - Key technologies / methods used.
-  - [GitHub](https://github.com/your-repo) | [Demo](https://your-demo-link.com) *(optional)*
+- **PhenoHue**
+
+A Computer Vision desktop application that automates the analysis of hibiscus plant images, extracting flower color, petal and inner-eye regions size, plant dimensions, and plant IDs to help researchers efficiently analyse large breeding datasets and compare phenotypic traits for more objective breeding decisions.
+
+Python · OpenCV · NumPy · Pandas · EasyOCR · scikit-image · scikit-learn · PySide6 · OpenPyXL · PyInstaller
+
+[Poster](https://drive.google.com/file/d/1orLoy6QZaITOcarGptlDPLfH7W7aGvUt/view?usp=drive_link)
 
 </div>
 </div>
 
+<div class='paper-box project-box'>
+<div class='paper-box-text' markdown="1">
+
+- **Malaria Diagnosis via RNA Sequencing with XAI**
+
+Built a machine learning pipeline to detect Plasmodium knowlesi and classify malaria life-cycle stages from RNA-sequencing data. Compared CNN, LSTM, SVM, and Random Forest models, achieving 91% classification accuracy. Integrated SHAP-based Explainable AI to identify the features driving model predictions, making the results more interpretable for potential clinical applications.
+
+Python · PyTorch · Scikit-learn · SHAP · Explainable AI · Machine Learning
+
+</div>
+</div>
+
+<div class='paper-box project-box'>
+<div class='paper-box-text' markdown="1">
+
+- **TCP/IP Protocol Analysis & Security Simulation**
+
+Conducted hands-on, packet-level analysis of live network traffic to evaluate IP fragmentation, verify UDP checksums, and model TCP congestion control mechanisms. Engineered a Python-based HTTP server to simulate a man-in-the-middle credential harvesting attack, reconstructing intercepted payloads and extracting plaintext data to practically demonstrate the critical security advantages of TLS 1.3 encryption.
+
+Python · Wireshark · TCP/IP · UDP · ICMP · HTTP/HTTPS · TLS 1.3
+
+</div>
+</div>
+
+<div class='paper-box project-box'>
+<div class='paper-box-text' markdown="1">
+
+- **Hungry Wolf**
+
+Built a full-stack gamified food-delivery platform with experiences for customers, restaurants, and delivery partners, supporting order management, delivery workflows, ratings, and a points-based rewards system. Encouraged users to support local eateries through bonus rewards and integrated a Meal-for-a-Meal donation program to add measurable social impact to the ordering experience.
+
+React · Node.js · Express.js · Firebase · React Query · Context API · GitHub Actions
+
+[GitHub](https://github.com/yashvinshah/SE_2025_projects/tree/main/proj2)
+[Demo](https://drive.google.com/file/d/1R85vYgjbKL3zBZsimE7ruI46UfgAdN8x/view)
+
+</div>
+</div>
+
+<div class='paper-box project-box'>
+<div class='paper-box-text' markdown="1">
+
+- **MediBuddy**
+
+*Hackathon project*
+
+Built this AI-powered mobile application that turns medical diagnostic reports into searchable, conversational data. Developed an OCR pipeline to extract text from multi-page PDFs and images, then connected the extracted information to a document-based chatbot so users could ask questions about their reports in natural language. Built the Flutter mobile application and Flask backend from the ground up, with Firebase handling authentication and data storage. 
+
+The project was selected as a Top 10 finalist at TSEC HACKS 24.
+
+Flutter · Python · Flask · LlamaIndex · Tesseract · PyTesseract · pdfplumber · Firebase
+
+[Presentation Slides](https://www.canva.com/design/DAF7gkIcfY8/9TcstwxGqiFpGxA-fdVqew/edit)
+
+</div>
+</div>
+
+<div class='paper-box project-box'>
+<div class='paper-box-text' markdown="1">
+
+- **Fit.AI**
+
+*Hackathon project*
+
+A personalized fitness application that uses camera-based pose estimation to track body landmarks and analyze exercise form in real time. Developed a computer vision pipeline with MediaPipe and OpenCV, incorporating an LSTM-based machine learning model to recognize exercise movements and provide form feedback. Integrated the ML system into a Flutter mobile application and built personalized workout recommendations based on users’ fitness goals and levels. 
+
+Developed the working prototype in 24 hours, placing Top 15 overall and Top 3 in its problem statement at DataHack 2.0.
+
+Flutter · Python · OpenCV · MediaPipe · TensorFlow · LSTM · Google ML Kit · Machine Learning
+
+[Presentation Slides](https://www.canva.com/design/DAFylEr99Hs/-OvKotb4UhFgdQmSeuJTQw/edit)
+
+</div>
+</div>

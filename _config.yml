@@ -44,7 +44,7 @@ author:
   lastfm           :
   linkedin         : "yashvi-shah-b35071252"     # e.g., "your-linkedin-slug"
   dblp             :      # e.g., "https://dblp.org/pid/xx/xxxx.html"
-  orcid            : "https://orcid.org/0009-0005-2379-4135"     # e.g., "https://orcid.org/0000-0000-0000-0000"
+  orcid            :     # e.g., "https://orcid.org/0000-0000-0000-0000"
   pinterest        :
   soundcloud       :
   stackoverflow    :
