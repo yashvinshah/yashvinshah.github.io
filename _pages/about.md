@@ -103,7 +103,7 @@ In my first year, I worked on research at the intersection of learning science, 
 
 **Summer Intern**, Raleigh, USA
 
-**Chen's Ornamental Plant Breeding Lab — Dr. Hsuan Chen**  
+**Chen's Lab — Dr. Hsuan Chen**  
 *June 2026 – August 2026*
 
 - In summer'26 I got the opportunity to explore the application of AI and automation beyond core computer science by collaborating with the Horticulture Department at NC State on a plant phenotyping project focused on plant selection for breeding.
@@ -121,10 +121,10 @@ In my first year, I worked on research at the intersection of learning science, 
   </div>
 <div class='paper-box-text' markdown="1">
 
-- *January 2025 – June 2025*, [[Capgemini Technology](https://www.capgemini.com/in-en/)], Mumbai, India  
+- [[Capgemini Technology](https://www.capgemini.com/in-en/)], Mumbai, India  
 
   **Data Engineer Intern**
-
+  *January 2025 – June 2025*
 As a Data Engineer Intern at Capgemini, I worked on a client-facing project for Baker Hughes. I used Azure Databricks and PySpark to access, transform, and analyze data from client databases and deliver information based on project requirements.
 
   - Worked with Azure Databricks and PySpark to build data processing and analysis workflows.
@@ -144,9 +144,10 @@ As a Data Engineer Intern at Capgemini, I worked on a client-facing project for 
   </div>
 <div class='paper-box-text' markdown="1">
 
-- *July 2023 – September 2023*, [[Pay1](https://www.pay1.in/)], Mumbai, India  
+- [[Pay1](https://www.pay1.in/)], Mumbai, India  
 
   **Data Analyst Intern**
+  *July 2023 – September 2023*
 
 As a Data Analyst Intern, I worked with the data analysis team to automate recurring reports and identify meaningful KPIs from large-scale retail transaction data. This was my first hands-on experience working extensively with Python for data analysis and visualization.
 
