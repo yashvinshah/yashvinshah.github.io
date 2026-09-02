@@ -71,6 +71,7 @@ LinkedIn: [[Yashvi Shah](https://www.linkedin.com/in/yashvi-shah-b35071252/)]
 
 **iEXCEL Lab — Dr. Aditi Mallavarapu**  
 *August 2026 – Present*
+
 I currently contribute to interdisciplinary research projects spanning computer vision, ecological networks, graph machine learning, and research analytics across multiple projects.
 
 - Contribute to the development and deployment of a large-scale ecological platform powered by crowdsourced iNaturalist observations. Working across backend/frontend integration, CI/CD, data validation, and expert evaluation, while developing a Graph Neural Network (GNN) to validate trophic interactions within large-scale food webs.
@@ -121,6 +122,7 @@ In my first year, I worked on research at the intersection of learning science, 
 <div class='paper-box-text' markdown="1">
 
 - *January 2025 – June 2025*, [[Capgemini Technology](https://www.capgemini.com/in-en/)], Mumbai, India  
+
   **Data Engineer Intern**
 
 As a Data Engineer Intern at Capgemini, I worked on a client-facing project for Baker Hughes. I used Azure Databricks and PySpark to access, transform, and analyze data from client databases and deliver information based on project requirements.
@@ -143,6 +145,7 @@ As a Data Engineer Intern at Capgemini, I worked on a client-facing project for 
 <div class='paper-box-text' markdown="1">
 
 - *July 2023 – September 2023*, [[Pay1](https://www.pay1.in/)], Mumbai, India  
+
   **Data Analyst Intern**
 
 As a Data Analyst Intern, I worked with the data analysis team to automate recurring reports and identify meaningful KPIs from large-scale retail transaction data. This was my first hands-on experience working extensively with Python for data analysis and visualization.
@@ -166,55 +169,37 @@ As a Data Analyst Intern, I worked with the data analysis team to automate recur
      3. Replace the link and author list.
      Duplicate this block for each paper.                           -->
 
-<div class='paper-box'>
+<div class='paper-box pub-box'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge">International Conference on Artificial Intelligence and Machine Vision (AIMV), 2025</div>
-      <img src='images/ieee.webp' alt="paper preview" width="100%">
+      <img src='images/ieee.webp' alt="IEEE" width="100%">
     </div>
   </div>
-<div class='paper-box-text' markdown="1">
-
-[Attention-based Anomaly Detection using hybrid models in Multivariate Time Series Data](https://ieeexplore.ieee.org/abstract/document/11203643)
-
-<!-- **[Yashvi Shah]**, ...Deepali Patil<sup>*</sup> -->
-
-- Built a hybrid model of deep learning based on CNN, LSTM,TCN, and an attention mechanism to detect rare/faint anomalies in multivariate timeseries data.  
-</div>
+  <div class='pub-title'><a href="https://ieeexplore.ieee.org/abstract/document/11203643">Attention-based Anomaly Detection using hybrid models in Multivariate Time Series Data</a></div>
+  <div class='pub-venue'>International Conference on Artificial Intelligence and Machine Vision (AIMV), 2025</div>
+  <div class='pub-desc'>Built a hybrid model of deep learning based on CNN, LSTM, TCN, and an attention mechanism to detect rare/faint anomalies in multivariate timeseries data.</div>
 </div>
 
-<div class='paper-box'>
+<div class='paper-box pub-box'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge">Grenze International Journal of Engineering & Technology (GIJET), 2025</div>
-      <img src='images/grenze.jpg' alt="paper preview" width="100%">
+      <img src='images/grenze.jpg' alt="Grenze" width="100%">
     </div>
   </div>
-<div class='paper-box-text' markdown="1">
-
-[BotLand: Tailoring LLaMA Language Model for Customised Chat](https://thegrenze.com/abstract/journal/3760)
-
-<!-- Achintya Shah,**[Yashvi Shah]**, ...Sudhir Dhekane<sup>*</sup> -->
-
-- Developed a personalised, curriculum-aware chatbot using LLaMA and information retrieval to answer ICSE students’ questions across Grades 6–9, combining text book knowledge with natural language for better understanding. 
-</div>
+  <div class='pub-title'><a href="https://thegrenze.com/abstract/journal/3760">BotLand: Tailoring LLaMA Language Model for Customised Chat</a></div>
+  <div class='pub-venue'>Grenze International Journal of Engineering & Technology (GIJET), 2025</div>
+  <div class='pub-desc'>Developed a personalised, curriculum-aware chatbot using LLaMA and information retrieval to answer ICSE students’ questions across Grades 6–9, combining text book knowledge with natural language for better understanding.</div>
 </div>
 
-<div class='paper-box'>
+<div class='paper-box pub-box'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge">Congress on Smart Computing Technologies, 2024</div>
-      <img src='images/springer.jpg' alt="paper preview" width="100%">
+      <img src='images/springer.jpg' alt="Springer" width="100%">
     </div>
   </div>
-<div class='paper-box-text' markdown="1">
-
-[Benchmarking Large Language Models: A Comprehensive Comparison of Architectures and Their Implications](https://link.springer.com/chapter/10.1007/978-981-96-6250-0_42)
-
-<!-- **[Yashvi Shah]**, Achintya Shah, Drashti Shah, Dhruvi Doshi, Deepali Patil<sup>*</sup> -->
-
-- Conducted a comparative analysis of various LLMs to understand their capabilities, use cases, and strengths. The study helped identify the most suitable model for the BotLand project.
-</div>
+  <div class='pub-title'><a href="https://link.springer.com/chapter/10.1007/978-981-96-6250-0_42">Benchmarking Large Language Models: A Comprehensive Comparison of Architectures and Their Implications</a></div>
+  <div class='pub-venue'>Congress on Smart Computing Technologies, 2024</div>
+  <div class='pub-desc'>Conducted a comparative analysis of various LLMs to understand their capabilities, use cases, and strengths. The study helped identify the most suitable model for the BotLand project.</div>
 </div>
 
 <span class='anchor' id='selected-projects'></span>
