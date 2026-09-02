@@ -112,9 +112,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .masthead__inner-wrap {
-  max-width: 1600px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 3em;
 }
 
 .greedy-nav {
@@ -179,10 +179,10 @@ h1, h2, h3, h4, h5, h6 {
    Page shell
    ================================================================ */
 #main {
-  max-width: 1600px;
+  max-width: 1280px;
   margin: 1.75rem auto 4rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   float: none;
   width: auto;
 }
@@ -680,10 +680,6 @@ hr {
   color: var(--ink-soft);
 }
 
-.card-grid--pubs {
-  grid-template-columns: 1fr !important;
-}
-
 .card-preview {
   display: flex;
   align-items: center;
@@ -1040,6 +1036,16 @@ $scroll_offset: 2em;
    Tablet / mobile
    ================================================================ */
 @media (max-width: 900px) {
+  #main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .masthead__inner-wrap {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
   .layout-editorial .sidebar {
     padding: 1.5rem 1.4rem;
   }

@@ -180,7 +180,6 @@
     groups.forEach(function (run) {
       var grid = document.createElement('div');
       grid.className = 'card-grid';
-      if (run[0].classList.contains('pub-box')) grid.classList.add('card-grid--pubs');
       run[0].parentNode.insertBefore(grid, run[0]);
       run.forEach(function (el) { grid.appendChild(el); });
     });
