@@ -121,17 +121,18 @@ In my first year, I worked on research at the intersection of learning science, 
   </div>
 <div class='paper-box-text' markdown="1">
 
-- [[Capgemini Technology](https://www.capgemini.com/in-en/)], Mumbai, India  
+**[Capgemini Technology](https://www.capgemini.com/in-en/)**, Mumbai, India
 
-  **Data Engineer Intern**
-  *January 2025 – June 2025*
+**Data Engineer Intern**
+*January 2025 – June 2025*
+
 As a Data Engineer Intern at Capgemini, I worked on a client-facing project for Baker Hughes. I used Azure Databricks and PySpark to access, transform, and analyze data from client databases and deliver information based on project requirements.
 
-  - Worked with Azure Databricks and PySpark to build data processing and analysis workflows.
-  - Accessed and retrieved relevant data from databases based on business and analytical requirements.
-  - Developed practical experience working with cloud-based data platforms, virtual machines, distributed teams, and client-facing data engineering workflows.
+- Worked with Azure Databricks and PySpark to build data processing and analysis workflows.
+- Accessed and retrieved relevant data from databases based on business and analytical requirements.
+- Developed practical experience working with cloud-based data platforms, virtual machines, distributed teams, and client-facing data engineering workflows.
 
-  This experience gave me my first exposure to working with real-world cloud data infrastructure and showed me how data engineering connects technical implementation with business requirements.It significantly made me more comfortable working with cloud environments, VMs, and client-facing projects.
+This experience gave me my first exposure to working with real-world cloud data infrastructure and showed me how data engineering connects technical implementation with business requirements. It significantly made me more comfortable working with cloud environments, VMs, and client-facing projects.
 
 </div>
 </div>
@@ -144,18 +145,18 @@ As a Data Engineer Intern at Capgemini, I worked on a client-facing project for 
   </div>
 <div class='paper-box-text' markdown="1">
 
-- [[Pay1](https://www.pay1.in/)], Mumbai, India  
+**[Pay1](https://www.pay1.in/)**, Mumbai, India
 
-  **Data Analyst Intern**
-  *July 2023 – September 2023*
+**Data Analyst Intern**
+*July 2023 – September 2023*
 
 As a Data Analyst Intern, I worked with the data analysis team to automate recurring reports and identify meaningful KPIs from large-scale retail transaction data. This was my first hands-on experience working extensively with Python for data analysis and visualization.
 
-  - Used Python, Pandas, and NumPy to clean, transform, and analyze large transaction datasets.
-  - Automated parts of the team's report generation workflow, reducing repetitive manual analysis and making reports more efficient to produce.
-  - Built a strong foundation in Python-based data analysis, exploratory data analysis (EDA), data visualization, and working with real-world business data.
+- Used Python, Pandas, and NumPy to clean, transform, and analyze large transaction datasets.
+- Automated parts of the team's report generation workflow, reducing repetitive manual analysis and making reports more efficient to produce.
+- Built a strong foundation in Python-based data analysis, exploratory data analysis (EDA), data visualization, and working with real-world business data.
 
-  This was my first experience beyond the classroom and into the real world. It significantly strengthened my communication and teamwork skills.
+This was my first experience beyond the classroom and into the real world. It significantly strengthened my communication and teamwork skills.
 
 </div>
 </div>
