@@ -74,17 +74,18 @@ LinkedIn: [[Yashvi Shah](https://www.linkedin.com/in/yashvi-shah-b35071252/)]
 
 I currently contribute to interdisciplinary research projects spanning computer vision, ecological networks, graph machine learning, and research analytics across multiple projects.
 
-- Contribute to the development and deployment of a large-scale ecological platform powered by crowdsourced iNaturalist observations. Working across backend/frontend integration, CI/CD, data validation, and expert evaluation, while developing a Graph Neural Network (GNN) to validate trophic interactions within large-scale food webs.
-- Another project involves collaborating with the University Libraries and Ecology department to analyze research collaboration patterns across NC State using large-scale publication data.
-- Mentor undergraduate researchers across projects and provide technical guidance.
+- Contributing to the development and deployment of a large-scale ecological platform powered by crowdsourced iNaturalist observations (250,000+ new observations added daily) working across backend/frontend integration, a PostgreSQL + Neo4j data layer, CI/CD, and data validation.
+- Developing a Graph Neural Network (GNN) to validate trophic interactions within large-scale food webs, aimed at reducing manual expert-review time and error rate.
+- Another project involves collaborating with the University Libraries and Ecology department to analyze 2 decades of NC State publication and faculty data — building HPC-based pipelines to construct co-authorship networks and applying NLP/topic modeling to trace how research themes evolve across departments.
+- Mentor 5 undergraduate researchers across projects and provide technical guidance.
 
 **IEC Lab — Dr. Noboru Matsuda**  
 *August 2025 – May 2026*
 
 In my first year, I worked on research at the intersection of learning science, cognitive science, and artificial intelligence, developing computational methods to understand student learnings.
 
-- We analyzed student responses from multiple courses to evaluate response accuracy and identify patterns in student understanding. Applied Item Response Theory (IRT), machine learning, and LLM-based analysis to identify misconceptions, knowledge gaps, and areas where students struggled.
-- Also developed and improved an automatic depth-perception pipeline for a packaging robot, using computer vision techniques to correct depth estimation and improve the reliability of automated object handling.
+- We analyzed student responses from multiple courses to evaluate response accuracy and identify patterns in student understanding. Applied Item Response Theory (IRT), machine learning, and LLM-based analysis to identify misconceptions, knowledge gaps, and areas where students struggled. Our models predicted automated-assertion validity with ~85% accuracy across 3,000 test cases.
+- Also developed and improved an automatic depth-perception pipeline for a packaging robot, using computer vision techniques to correct depth estimation and improving object-detection accuracy by 18% and the reliability of automated object handling. 
 
 </div>
 </div>
@@ -192,7 +193,7 @@ This was my first experience beyond the classroom and into the real world. It si
 
 - **PhenoHue**
 
-A Computer Vision desktop application that automates the analysis of hibiscus plant images, extracting flower color, petal and inner-eye regions size, plant dimensions, and plant IDs to help researchers efficiently analyse large breeding datasets and compare phenotypic traits for more objective breeding decisions.
+A Computer Vision desktop application that automates the analysis of hibiscus plant images, extracting flower color, petal and inner-eye regions size, plant dimensions, and plant IDs to help researchers efficiently analyse large breeding datasets and compare phenotypic traits for more objective breeding decisions with 93% accuracy.
 
 Python · OpenCV · NumPy · Pandas · EasyOCR · scikit-image · scikit-learn · PySide6 · OpenPyXL · PyInstaller
 
