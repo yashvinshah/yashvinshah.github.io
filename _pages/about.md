@@ -23,6 +23,8 @@ A 2nd year MS Student / Researcher at [[NC State University](https://www.ncsu.ed
 
 From optimizing ML pipelines to building systems, I enjoy solving problems where intelligence, scale and reliability intersect. I have worked acorss AI/ML, Deep learning, NLP, Computer Vision, and Data Systems turning research and raw data into real world solutions.
 
+Excited to graduate and bring my skills in software engineering, AI/ML, and data systems to solve real-world problems.
+
 Contact me:  
 Email: [yashviishah03@gmail.com]  
 LinkedIn: [[Yashvi Shah](https://www.linkedin.com/in/yashvi-shah-b35071252/)]
@@ -39,10 +41,10 @@ LinkedIn: [[Yashvi Shah](https://www.linkedin.com/in/yashvi-shah-b35071252/)]
 
 # Education
 
-- *Aug 2025 – Present*, [[NC State University](https://www.ncsu.edu/)], Raleigh, USA
+- *Aug 2025 – Present*, [NC State University](https://www.ncsu.edu/), Raleigh, USA
   - Master's Degree, Computer Science (MCS)
 
-- *Jan 2022 – May 2025*, [[DJ Sanghvi College of Engineering, University of Mumbai](https://www.djsce.ac.in/)], Mumbai, India
+- *Jan 2022 – May 2025*, [DJ Sanghvi College of Engineering, University of Mumbai](https://www.djsce.ac.in/), Mumbai, India
   - B. Tech in Artificial Intelligence and Data Science with Honors in Computational Biology
 
 <span class='anchor' id='internship-experiences'></span>
@@ -174,7 +176,7 @@ This was my first experience beyond the classroom and into the real world. It si
 
 <div class='paper-box pub-box'><div class='pub-head'><div class='paper-box-image'><div><img src='images/ieee.webp' alt="IEEE" width="100%"></div></div><div class='pub-title'><a href="https://ieeexplore.ieee.org/abstract/document/11203643">Attention-based Anomaly Detection using hybrid models in Multivariate Time Series Data</a></div></div><div class='pub-venue'>International Conference on Artificial Intelligence and Machine Vision (AIMV), 2025</div><div class='pub-desc'>Built a hybrid model of deep learning based on CNN, LSTM, TCN, and an attention mechanism to detect rare/faint anomalies in multivariate timeseries data.</div></div>
 
-<div class='paper-box pub-box'><div class='pub-head'><div class='paper-box-image'><div><img src='images/grenze.jpg' alt="Grenze" width="100%"></div></div><div class='pub-title'><a href="https://thegrenze.com/abstract/journal/3760">BotLand: Tailoring LLaMA Language Model for Customised Chat</a></div></div><div class='pub-venue'>Grenze International Journal of Engineering & Technology (GIJET), 2025</div><div class='pub-desc'>Developed a personalised, curriculum-aware chatbot using LLaMA and information retrieval to answer ICSE students’ questions across Grades 6–9, combining text book knowledge with natural language for better understanding.</div></div>
+<div class='paper-box pub-box'><div class='pub-head'><div class='paper-box-image'><div><img src='images/grenze.png' alt="Grenze" width="100%"></div></div><div class='pub-title'><a href="https://thegrenze.com/abstract/journal/3760">BotLand: Tailoring LLaMA Language Model for Customised Chat</a></div></div><div class='pub-venue'>Grenze International Journal of Engineering & Technology (GIJET), 2025</div><div class='pub-desc'>Developed a personalised, curriculum-aware chatbot using LLaMA and information retrieval to answer ICSE students’ questions across Grades 6–9, combining text book knowledge with natural language for better understanding.</div></div>
 
 <div class='paper-box pub-box'><div class='pub-head'><div class='paper-box-image'><div><img src='images/springer.jpg' alt="Springer" width="100%"></div></div><div class='pub-title'><a href="https://link.springer.com/chapter/10.1007/978-981-96-6250-0_42">Benchmarking Large Language Models: A Comprehensive Comparison of Architectures and Their Implications</a></div></div><div class='pub-venue'>Congress on Smart Computing Technologies, 2024</div><div class='pub-desc'>Conducted a comparative analysis of various LLMs to understand their capabilities, use cases, and strengths. The study helped identify the most suitable model for the BotLand project.</div></div>
 
