@@ -199,11 +199,7 @@ body.layout-folio h4 {
 }
 
 .layout-folio .page__content .hero-links a,
-.layout-folio .page__content .entry__title a,
-.layout-folio .page__content .pub-title a,
 .layout-folio .page__content .btn-accent,
-.layout-folio .page__content .folio-card a,
-.layout-folio .page__content .folio-card__link,
 .layout-folio .page__content .edu-row__school {
   border-bottom: 0 !important;
   background-image: none;
@@ -213,10 +209,34 @@ body.layout-folio h4 {
   border: 1px solid var(--line) !important;
 }
 
+.layout-folio .page__content .pub-title a,
+.layout-folio .page__content .text-link,
 .layout-folio .page__content .entry__title a {
   color: var(--ink);
+  border-bottom: 1px solid rgba(44, 42, 38, 0.28) !important;
+  background-image: none;
+  cursor: pointer;
 
-  &:hover { color: var(--accent); }
+  &:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent) !important;
+  }
+}
+
+.layout-folio .page__content .hero-about a,
+.layout-folio .page__content .hero-about a:not([class]) {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 1.35em;
+  letter-spacing: -0.02em;
+  color: #cc0000;
+  border-bottom: 2px solid rgba(204, 0, 0, 0.35) !important;
+  cursor: pointer;
+
+  &:hover {
+    color: #a30000;
+    border-bottom-color: #cc0000 !important;
+  }
 }
 
 /* Full-bleed sections */
@@ -561,12 +581,17 @@ body.layout-folio h4 {
 
 .edu-chip {
   display: inline-block;
-  padding: 0.28rem 0.7rem;
+  padding: 0.26rem 0.65rem;
   border-radius: 999px;
-  background: var(--wash);
+  background: rgba(65, 105, 225, 0.1);
+  color: #2d4aa8;
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+.edu-chip--honor {
+  background: rgba(65, 105, 225, 0.16);
   color: var(--accent);
-  font-size: 0.78rem;
-  font-weight: 700;
 }
 
 .card-grid,
@@ -574,6 +599,59 @@ body.layout-folio h4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
+}
+
+.hackathon-block {
+  margin-top: 3.2rem;
+}
+
+.hackathon-heading {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin: 0 0 1.1rem;
+}
+
+.hackathon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 640px;
+}
+
+.folio-card.is-hackathon {
+  min-height: 0;
+  aspect-ratio: 1;
+  padding: 1.15rem 1.1rem 1rem !important;
+}
+
+.folio-card.is-hackathon .entry__title {
+  font-size: 1.08rem;
+}
+
+.folio-card.is-hackathon .entry__summary {
+  font-size: 0.86rem;
+  -webkit-line-clamp: 3;
+}
+
+.folio-card.is-hackathon .folio-card__tech {
+  margin-bottom: 0.55rem;
+}
+
+.folio-card.is-hackathon .folio-card__tech img {
+  width: 18px;
+  height: 18px;
+}
+
+.folio-card.is-hackathon .folio-card__pattern {
+  height: 48px;
+  margin: -1.15rem -1.1rem 0.7rem;
+}
+
+.folio-card.is-hackathon .folio-card__cta {
+  font-size: 0.7rem;
+  padding-top: 0;
 }
 
 .folio-card {
@@ -711,9 +789,36 @@ body.layout-folio h4 {
   gap: 0.75rem;
 }
 
-.folio-card__links {
+.folio-card__labs {
+  position: relative;
+  z-index: 2;
   display: flex;
-  gap: 0.4rem;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.95rem;
+  margin: 0.4rem 0 0;
+}
+
+.folio-card__extras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.85rem;
+}
+
+.folio-card__extra {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent) !important;
+  border-bottom: 1px solid rgba(65, 105, 225, 0.4) !important;
+  cursor: pointer;
+
+  &:hover { border-bottom-color: var(--accent) !important; }
+}
+
+.pub-ext {
+  font-size: 0.7em;
+  margin-left: 0.28em;
+  opacity: 0.5;
+  vertical-align: middle;
 }
 
 .folio-card__link {
@@ -806,6 +911,7 @@ body.layout-folio h4 {
   font-family: 'Newsreader', Georgia, serif;
   font-size: 1.25rem;
   line-height: 1.35;
+  color: var(--ink);
 }
 
 .pub-venue {
@@ -1010,9 +1116,14 @@ body.layout-folio .site-band p {
     .hero-links { justify-content: center; }
 
     .card-grid,
-    .project-grid {
+    .project-grid,
+    .hackathon-grid {
       grid-template-columns: 1fr;
     }
+
+    .hackathon-grid { max-width: none; }
+
+    .folio-card.is-hackathon { aspect-ratio: auto; }
 
   .edu-timeline:before { display: none; }
 

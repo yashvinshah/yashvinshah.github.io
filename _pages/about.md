@@ -19,7 +19,7 @@ redirect_from:
 
 # Hey, I'm Yashvi!
 
-A 2nd year MS Student / Researcher at [[NC State University](https://www.ncsu.edu/)]
+A 2nd year MS Student / Researcher at [NC State University](https://www.ncsu.edu/)
 
 From optimizing ML pipelines to building systems, I enjoy solving problems where intelligence, scale and reliability intersect. I have worked acorss AI/ML, Deep learning, NLP, Computer Vision, and Data Systems turning research and raw data into real world solutions.
 
@@ -189,6 +189,20 @@ This was my first experience beyond the classroom and into the real world. It si
      1. Title, one-line summary, optional GitHub/Demo links.
      2. Extra detail (tech stack, longer description) appears in Read more.
      Duplicate this block for each project.                        -->
+
+<div class='paper-box project-box'>
+<div class='paper-box-text' markdown="1">
+
+- **Repository Context Augmentation for LLM Bug Repair**
+
+*Ongoing, 2026*
+
+Building a Docker/SWE-bench-based evaluation harness to test whether GenAI coding agents produce better bug-repair patches with augmented repository context vs. retrieval-only or retry baselines; owning baseline retrieval and LLM integration for the experiment pipeline.
+
+Python · Docker · SWE-bench · LLM APIs · Git · Spec Kit
+
+</div>
+</div>
 
 <div class='paper-box project-box'>
 <div class='paper-box-text' markdown="1">

@@ -272,15 +272,22 @@
         body.appendChild(loc);
       }
       var honor = degree.match(/Honors in (.+)$/i);
+      var chips = document.createElement('div');
+      chips.className = 'edu-chips';
       if (honor) {
-        var chips = document.createElement('div');
-        chips.className = 'edu-chips';
+        var honorChip = document.createElement('span');
+        honorChip.className = 'edu-chip edu-chip--honor';
+        honorChip.textContent = 'Honors in ' + honor[1];
+        chips.appendChild(honorChip);
+      }
+      var courses = courseworkFor(schoolName);
+      courses.forEach(function (name) {
         var chip = document.createElement('span');
         chip.className = 'edu-chip';
-        chip.textContent = 'Honors in ' + honor[1];
+        chip.textContent = name;
         chips.appendChild(chip);
-        body.appendChild(chips);
-      }
+      });
+      if (chips.children.length) body.appendChild(chips);
 
       row.appendChild(date);
       row.appendChild(rail);
@@ -290,6 +297,42 @@
     });
 
     ul.parentNode.replaceChild(timeline, ul);
+  }
+
+  function courseworkFor(schoolName) {
+    if (/NC State/i.test(schoolName)) {
+      return [
+        'Software Engineering',
+        'Design and Analysis of Algorithms',
+        'Automated Learning & Data Analysis',
+        'Computer Networks',
+        'Neural Networks',
+        'Deep Learning Beyond Accuracy',
+        'Computer and Network Security',
+        'Parallel Systems',
+        'Software Engineering and GenAI'
+      ];
+    }
+    if (/Sanghvi/i.test(schoolName)) {
+      return [
+        'Machine Learning',
+        'Deep Learning',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Large Language Models',
+        'Artificial Intelligence',
+        'Explainable AI',
+        'MLOps',
+        'Data Structures and Algorithms',
+        'Advanced Algorithms',
+        'Database Management Systems',
+        'Statistics for Engineers',
+        'Data Engineering & Visualisation',
+        'Cloud Computing',
+        'Time Series Analysis and Forecasting'
+      ];
+    }
+    return [];
   }
 
   function hideDuplicatePubCitation() {
@@ -405,7 +448,7 @@
   }
 
   function isProjectTag(t) {
-    return /^hackathon\s+projects?$/i.test(t || '');
+    return /^hackathon\s+projects?$/i.test(t || '') || /^ongoing\b/i.test(t || '');
   }
 
   function stripProjectTitleFromBody(body, title) {
@@ -504,6 +547,8 @@
     flask: 'flask',
     tensorflow: 'tensorflow',
     wireshark: 'wireshark',
+    docker: 'docker',
+    git: 'git',
     pyside6: 'qt'
   };
 
@@ -663,6 +708,24 @@
       role.textContent = info.subtitle;
       card.appendChild(role);
     }
+    if (/Graduate Research Assistant/i.test(info.subtitle || '')) {
+      var labs = document.createElement('div');
+      labs.className = 'folio-card__labs';
+      [
+        { name: 'iEXCEL Lab', href: 'https://sites.google.com/ncsu.edu/draditimallavarapu' },
+        { name: 'IEC Lab', href: 'https://www.ieclab.org/' }
+      ].forEach(function (lab) {
+        var a = document.createElement('a');
+        a.href = lab.href;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.className = 'text-link';
+        a.textContent = lab.name;
+        a.addEventListener('click', function (e) { e.stopPropagation(); });
+        labs.appendChild(a);
+      });
+      card.appendChild(labs);
+    }
     var metaBits = [location, info.meta && info.meta !== info.subtitle ? info.meta : ''].filter(Boolean);
     if (metaBits.length) {
       var meta = document.createElement('p');
@@ -681,6 +744,11 @@
 
   var projectCardIndex = 0;
 
+  function isSecondaryLink(a) {
+    var label = textOf(a);
+    return /^(poster|presentation slides|slides)$/i.test(label);
+  }
+
   function flattenProject(card) {
     var textEl = card.querySelector('.paper-box-text');
     if (!textEl) return;
@@ -693,16 +761,20 @@
     stripProjectTitleFromBody(textEl, proj.title);
     textEl.className = 'entry__body';
 
+    var primary = [];
+    var secondary = [];
+    proj.links.forEach(function (src) {
+      if (isSecondaryLink(src)) secondary.push(src);
+      else primary.push(src);
+    });
+
     var modalLinks = document.createElement('div');
     modalLinks.className = 'entry__links';
-    var cardLinks = document.createElement('div');
-    cardLinks.className = 'folio-card__links';
     proj.links.forEach(function (src) {
       var a = src.cloneNode(true);
       a.setAttribute('target', '_blank');
       a.setAttribute('rel', 'noopener noreferrer');
       modalLinks.appendChild(a);
-      cardLinks.appendChild(makeCardLink(src));
       if (src.parentNode) src.parentNode.removeChild(src);
     });
 
@@ -716,8 +788,21 @@
 
     var title = document.createElement('h3');
     title.className = 'entry__title';
-    title.textContent = proj.title;
-    if (proj.tag) {
+    if (primary.length) {
+      var titleLink = document.createElement('a');
+      titleLink.href = primary[0].getAttribute('href');
+      titleLink.target = '_blank';
+      titleLink.rel = 'noopener noreferrer';
+      titleLink.className = 'text-link';
+      titleLink.textContent = proj.title;
+      titleLink.addEventListener('click', function (e) { e.stopPropagation(); });
+      title.appendChild(titleLink);
+    } else {
+      title.textContent = proj.title;
+    }
+    var isHack = /hackathon/i.test(proj.tag || '');
+    if (isHack) card.classList.add('is-hackathon');
+    if (proj.tag && !isHack) {
       var tag = document.createElement('span');
       tag.className = 'card-preview__tag';
       tag.textContent = proj.tag;
@@ -729,17 +814,32 @@
     if (proj.summary) {
       var summary = document.createElement('p');
       summary.className = 'entry__summary';
-      summary.textContent = proj.summary;
+      summary.textContent = isHack ? shortBlurb(proj.summary, 12) : proj.summary;
       card.appendChild(summary);
     }
 
+    var extras = secondary.concat(primary.slice(1));
     var foot = document.createElement('div');
     foot.className = 'folio-card__foot';
     var cta = document.createElement('span');
     cta.className = 'folio-card__cta';
     cta.textContent = 'View details';
     foot.appendChild(cta);
-    if (cardLinks.children.length) foot.appendChild(cardLinks);
+    if (extras.length) {
+      var extraWrap = document.createElement('div');
+      extraWrap.className = 'folio-card__extras';
+      extras.forEach(function (src) {
+        var extra = document.createElement('a');
+        extra.href = src.getAttribute('href');
+        extra.target = '_blank';
+        extra.rel = 'noopener noreferrer';
+        extra.className = 'folio-card__extra';
+        extra.textContent = (textOf(src) || 'Link') + ' →';
+        extra.addEventListener('click', function (e) { e.stopPropagation(); });
+        extraWrap.appendChild(extra);
+      });
+      foot.appendChild(extraWrap);
+    }
     card.appendChild(foot);
     card.appendChild(textEl);
     if (modalLinks.children.length) card.appendChild(modalLinks);
@@ -758,7 +858,17 @@
       var badge = makeBadge(img, title);
       if (wrap && wrap.parentNode) wrap.parentNode.replaceChild(badge, wrap);
       else if (card.querySelector('.pub-head')) card.querySelector('.pub-head').insertBefore(badge, card.querySelector('.pub-head').firstChild);
+      var pubLink = titleEl && titleEl.querySelector('a');
+      if (pubLink && !pubLink.querySelector('.pub-ext')) {
+        pubLink.insertAdjacentHTML('beforeend', ' <i class="fas fa-external-link-alt pub-ext" aria-hidden="true"></i>');
+      }
     });
+  }
+
+  function shortBlurb(text, maxWords) {
+    var words = (text || '').split(/\s+/).filter(Boolean);
+    if (words.length <= maxWords) return text;
+    return words.slice(0, maxWords).join(' ') + '…';
   }
 
   function wrapGrid(sectionId, selector, className) {
@@ -772,6 +882,32 @@
     items.forEach(function (el) { grid.appendChild(el); });
   }
 
+  function wrapProjectGrids() {
+    var section = document.getElementById('selected-projects');
+    if (!section) return;
+    var main = section.querySelectorAll('.folio-card:not(.is-hackathon)');
+    var hacks = section.querySelectorAll('.folio-card.is-hackathon');
+    if (main.length) {
+      var grid = document.createElement('div');
+      grid.className = 'project-grid';
+      main[0].parentNode.insertBefore(grid, main[0]);
+      main.forEach(function (el) { grid.appendChild(el); });
+    }
+    if (hacks.length) {
+      var block = document.createElement('div');
+      block.className = 'hackathon-block';
+      var heading = document.createElement('h2');
+      heading.className = 'hackathon-heading';
+      heading.textContent = 'Hackathon projects';
+      var hgrid = document.createElement('div');
+      hgrid.className = 'hackathon-grid';
+      hacks.forEach(function (el) { hgrid.appendChild(el); });
+      block.appendChild(heading);
+      block.appendChild(hgrid);
+      section.appendChild(block);
+    }
+  }
+
   function flattenEntries() {
     document.querySelectorAll('.paper-box').forEach(function (card) {
       if (card.classList.contains('pub-box')) return;
@@ -783,7 +919,7 @@
     });
     decoratePubs();
     wrapGrid('internship-experiences', '.folio-card', 'card-grid');
-    wrapGrid('selected-projects', '.folio-card', 'project-grid');
+    wrapProjectGrids();
   }
 
   var modal;
