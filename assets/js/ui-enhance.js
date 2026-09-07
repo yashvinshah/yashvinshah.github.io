@@ -705,7 +705,18 @@
 
     var title = document.createElement('h3');
     title.className = 'entry__title';
-    title.textContent = info.title;
+    if (info.href) {
+      var titleLink = document.createElement('a');
+      titleLink.href = info.href;
+      titleLink.target = '_blank';
+      titleLink.rel = 'noopener noreferrer';
+      titleLink.className = 'text-link';
+      titleLink.textContent = info.title;
+      titleLink.addEventListener('click', function (e) { e.stopPropagation(); });
+      title.appendChild(titleLink);
+    } else {
+      title.textContent = info.title;
+    }
     card.appendChild(title);
 
     if (info.subtitle) {

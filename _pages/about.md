@@ -102,7 +102,7 @@ In my first year, I worked on research at the intersection of learning science, 
 
   <div class='paper-box-text' markdown="1">
 
-**[Ornamental Plant Breeding Lab, NCSU](https://www.ncsu.edu/)**
+**[Ornamental Plant Breeding Lab, NCSU](https://cals.ncsu.edu/horticultural-science/people/hchen57/)**
 
 **Summer Intern**, Raleigh, USA
 
