@@ -566,9 +566,26 @@ body.layout-folio h4 {
   color: var(--ink);
 }
 
+.edu-row__honor {
+  margin: 0.2rem 0 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--accent);
+}
+
 .edu-row__place {
   margin: 0.35rem 0 0;
   font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.edu-row__courses-label {
+  margin: 0.9rem 0 0.4rem;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--ink-soft);
 }
 
@@ -576,7 +593,6 @@ body.layout-folio h4 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
-  margin-top: 0.85rem;
 }
 
 .edu-chip {
@@ -587,11 +603,6 @@ body.layout-folio h4 {
   color: #2d4aa8;
   font-size: 0.74rem;
   font-weight: 600;
-}
-
-.edu-chip--honor {
-  background: rgba(65, 105, 225, 0.16);
-  color: var(--accent);
 }
 
 .card-grid,

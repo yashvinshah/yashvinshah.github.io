@@ -265,29 +265,35 @@
         deg.textContent = degree.replace(/\s+with Honors in .+$/i, '');
         body.appendChild(deg);
       }
+      var honor = degree && degree.match(/Honors in (.+)$/i);
+      if (honor) {
+        var honorLine = document.createElement('p');
+        honorLine.className = 'edu-row__honor';
+        honorLine.textContent = 'Honors in ' + honor[1];
+        body.appendChild(honorLine);
+      }
       if (place) {
         var loc = document.createElement('p');
         loc.className = 'edu-row__place';
         loc.textContent = place;
         body.appendChild(loc);
       }
-      var honor = degree.match(/Honors in (.+)$/i);
-      var chips = document.createElement('div');
-      chips.className = 'edu-chips';
-      if (honor) {
-        var honorChip = document.createElement('span');
-        honorChip.className = 'edu-chip edu-chip--honor';
-        honorChip.textContent = 'Honors in ' + honor[1];
-        chips.appendChild(honorChip);
-      }
       var courses = courseworkFor(schoolName);
-      courses.forEach(function (name) {
-        var chip = document.createElement('span');
-        chip.className = 'edu-chip';
-        chip.textContent = name;
-        chips.appendChild(chip);
-      });
-      if (chips.children.length) body.appendChild(chips);
+      if (courses.length) {
+        var courseLabel = document.createElement('p');
+        courseLabel.className = 'edu-row__courses-label';
+        courseLabel.textContent = 'Coursework';
+        body.appendChild(courseLabel);
+        var chips = document.createElement('div');
+        chips.className = 'edu-chips';
+        courses.forEach(function (name) {
+          var chip = document.createElement('span');
+          chip.className = 'edu-chip';
+          chip.textContent = name;
+          chips.appendChild(chip);
+        });
+        body.appendChild(chips);
+      }
 
       row.appendChild(date);
       row.appendChild(rail);
