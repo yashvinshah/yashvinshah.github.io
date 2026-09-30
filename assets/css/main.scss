@@ -472,7 +472,8 @@ body.layout-folio h4 {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 920px;
+  max-width: none;
+  width: 100%;
 }
 
 .edu-timeline:before {
@@ -603,6 +604,64 @@ body.layout-folio h4 {
   color: #2d4aa8;
   font-size: 0.74rem;
   font-weight: 600;
+}
+
+.edu-row__gpa {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.edu-row__gpa-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-right: 0.3rem;
+}
+
+/* Disclosure toggles — small screens only */
+.disclosure-btn {
+  display: none;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.85rem 0 0;
+  padding: 0.5rem 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.disclosure-btn.is-open {
+  background: var(--wash);
+  border-color: var(--accent);
+}
+
+.disclosure-btn__hint {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--ink-soft);
+}
+
+.disclosure-btn__caret {
+  font-size: 0.7em;
+  transition: transform 0.25s var(--ease);
+}
+
+.disclosure-btn.is-open .disclosure-btn__caret {
+  transform: rotate(180deg);
 }
 
 .card-grid,
@@ -1151,6 +1210,32 @@ body.layout-folio .site-band p {
   }
 
   .edu-row__rail { display: none; }
+
+  /* Collapse long lists behind a tap target on phones */
+  .disclosure-btn { display: inline-flex; }
+
+  .edu-row__courses-label { display: none; }
+
+  .edu-courses-panel,
+  .pub-desc-panel {
+    display: none;
+    margin-top: 0.7rem;
+    padding: 1rem 1.05rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(40, 50, 90, 0.08);
+  }
+
+  .edu-courses-panel.is-open,
+  .pub-desc-panel.is-open {
+    display: block;
+  }
+
+  .pub-desc-panel .pub-desc {
+    margin: 0;
+    font-size: 0.95rem;
+  }
 
   .layout-folio .author__name,
   .layout-folio .sidebar .author__name {

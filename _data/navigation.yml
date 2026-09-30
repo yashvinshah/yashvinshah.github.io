@@ -1,15 +1,15 @@
 main:
-  - title: "About Me"
+  - title: "About"
     url: "#about-me"
 
-  - title: "Education"
-    url: "#educations"
+  - title: "Experience"
+    url: "#internship-experiences"
 
   - title: "Publications"
     url: "#publications"
 
-  - title: "Internships"
-    url: "#internship-experiences"
-
   - title: "Projects"
     url: "#selected-projects"
+
+  - title: "Education"
+    url: "#educations"

@@ -19,7 +19,7 @@
   function buildNavMap() {
     navLinks = Array.prototype.slice.call(document.querySelectorAll('.masthead__menu-item a'));
     sectionIds = [];
-    ['about-me', 'educations', 'internship-experiences', 'publications', 'selected-projects'].forEach(function (id) {
+    ['about-me', 'internship-experiences', 'publications', 'selected-projects', 'educations'].forEach(function (id) {
       if (document.getElementById(id)) sectionIds.push(id);
     });
 
@@ -75,11 +75,20 @@
     return el;
   }
 
+  function nextSectionAnchorBlock(start) {
+    var el = start.nextElementSibling;
+    while (el) {
+      if ((el.classList && el.classList.contains('anchor')) || el.querySelector('span.anchor')) return el;
+      el = el.nextElementSibling;
+    }
+    return null;
+  }
+
   function relocateAbout() {
     var dest = document.querySelector('.hero-about');
     var start = blockFromAnchor(document.getElementById('about-me'));
-    var end = blockFromAnchor(document.getElementById('educations'));
     if (!dest || !start) return;
+    var end = nextSectionAnchorBlock(start);
 
     var node = start.nextSibling;
     while (node && node !== end) {
@@ -194,6 +203,40 @@
     });
   }
 
+  var disclosureSeq = 0;
+
+  function makeDisclosure(label, panel, hint) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'disclosure-btn';
+    btn.setAttribute('aria-expanded', 'false');
+    disclosureSeq += 1;
+    var panelId = 'disclosure-panel-' + disclosureSeq;
+    panel.id = panelId;
+    btn.setAttribute('aria-controls', panelId);
+
+    var text = document.createElement('span');
+    text.className = 'disclosure-btn__label';
+    text.textContent = label;
+    btn.appendChild(text);
+    if (hint) {
+      var note = document.createElement('span');
+      note.className = 'disclosure-btn__hint';
+      note.textContent = hint;
+      btn.appendChild(note);
+    }
+    btn.insertAdjacentHTML('beforeend', '<i class="fas fa-chevron-down disclosure-btn__caret" aria-hidden="true"></i>');
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var open = panel.classList.toggle('is-open');
+      btn.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    return btn;
+  }
+
   function timelineEducation() {
     var section = document.getElementById('educations');
     if (!section) return;
@@ -226,7 +269,22 @@
         place = schoolLink.nextSibling.textContent.replace(/^[\s,]+/, '').trim();
       }
       var nested = li.querySelector('ul');
-      var degree = nested ? textOf(nested.querySelector('li') || nested) : '';
+      var degree = '';
+      var gpa = '';
+      if (nested) {
+        var subItems = Array.prototype.slice.call(nested.children).filter(function (n) {
+          return n.tagName === 'LI';
+        });
+        subItems.forEach(function (sub) {
+          var t = textOf(sub);
+          if (/GPA/i.test(t)) {
+            if (!gpa) gpa = t.replace(/^GPA\s*[:\-–]?\s*/i, '');
+          } else if (!degree) {
+            degree = t;
+          }
+        });
+        if (!degree && !subItems.length) degree = textOf(nested);
+      }
 
       var rail = document.createElement('div');
       rail.className = 'edu-row__rail';
@@ -272,6 +330,12 @@
         honorLine.textContent = 'Honors in ' + honor[1];
         body.appendChild(honorLine);
       }
+      if (gpa) {
+        var gpaLine = document.createElement('p');
+        gpaLine.className = 'edu-row__gpa';
+        gpaLine.innerHTML = '<span class="edu-row__gpa-label">GPA</span> ' + gpa;
+        body.appendChild(gpaLine);
+      }
       if (place) {
         var loc = document.createElement('p');
         loc.className = 'edu-row__place';
@@ -284,6 +348,9 @@
         courseLabel.className = 'edu-row__courses-label';
         courseLabel.textContent = 'Coursework';
         body.appendChild(courseLabel);
+
+        var panel = document.createElement('div');
+        panel.className = 'edu-courses-panel';
         var chips = document.createElement('div');
         chips.className = 'edu-chips';
         courses.forEach(function (name) {
@@ -292,7 +359,10 @@
           chip.textContent = name;
           chips.appendChild(chip);
         });
-        body.appendChild(chips);
+        panel.appendChild(chips);
+
+        body.appendChild(makeDisclosure('Coursework', panel, courses.length + ' courses'));
+        body.appendChild(panel);
       }
 
       row.appendChild(date);
@@ -878,6 +948,14 @@
       var pubLink = titleEl && titleEl.querySelector('a');
       if (pubLink && !pubLink.querySelector('.pub-ext')) {
         pubLink.insertAdjacentHTML('beforeend', ' <i class="fas fa-external-link-alt pub-ext" aria-hidden="true"></i>');
+      }
+      var desc = card.querySelector('.pub-desc');
+      if (desc && !card.querySelector('.disclosure-btn')) {
+        var descPanel = document.createElement('div');
+        descPanel.className = 'pub-desc-panel';
+        desc.parentNode.insertBefore(descPanel, desc);
+        descPanel.appendChild(desc);
+        card.insertBefore(makeDisclosure('Details', descPanel, ''), descPanel);
       }
     });
   }

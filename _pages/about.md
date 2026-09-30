@@ -37,16 +37,6 @@ LinkedIn: [[Yashvi Shah](https://www.linkedin.com/in/yashvi-shah-b35071252/)]
 - *Month YYYY* — [Brief news item, e.g., paper accepted at Conference X]
 - *Month YYYY* — [Another news item] -->
 
-<span class='anchor' id='educations'></span>
-
-# Education
-
-- *Aug 2025 – Present*, [NC State University](https://www.ncsu.edu/), Raleigh, USA
-  - Master's Degree, Computer Science (MCS)
-
-- *Jan 2022 – May 2025*, [DJ Sanghvi College of Engineering, University of Mumbai](https://www.djsce.ac.in/), Mumbai, India
-  - B. Tech in Artificial Intelligence and Data Science with Honors in Computational Biology
-
 <span class='anchor' id='internship-experiences'></span>
 
 # Experience
@@ -292,3 +282,15 @@ Flutter · Python · OpenCV · MediaPipe · TensorFlow · LSTM · Google ML Kit 
 
 </div>
 </div>
+
+<span class='anchor' id='educations'></span>
+
+# Education
+
+- *Aug 2025 – Present*, [NC State University](https://www.ncsu.edu/), Raleigh, USA
+  - Master's Degree, Computer Science (MCS)
+  - GPA: 4.0/4.0
+
+- *Jan 2022 – May 2025*, [DJ Sanghvi College of Engineering, University of Mumbai](https://www.djsce.ac.in/), Mumbai, India
+  - B. Tech in Artificial Intelligence and Data Science with Honors in Computational Biology
+  - GPA: 9.06/10
