@@ -547,8 +547,19 @@ body.layout-folio h4 {
   }
 }
 
+.edu-row__head {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.15rem 1.25rem;
+  width: 100%;
+}
+
 .edu-row__school {
   display: inline-block;
+  flex: 0 1 auto;
+  min-width: 0;
   font-family: 'Newsreader', Georgia, serif;
   font-size: clamp(1.55rem, 2.4vw, 2rem);
   font-weight: 500;
@@ -607,10 +618,12 @@ body.layout-folio h4 {
 }
 
 .edu-row__gpa {
-  margin: 0.3rem 0 0;
-  font-size: 0.95rem;
+  margin-left: auto;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 0.98rem;
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .edu-row__gpa-label {
@@ -646,13 +659,6 @@ body.layout-folio h4 {
 .disclosure-btn.is-open {
   background: var(--wash);
   border-color: var(--accent);
-}
-
-.disclosure-btn__hint {
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: none;
-  color: var(--ink-soft);
 }
 
 .disclosure-btn__caret {
@@ -1211,32 +1217,6 @@ body.layout-folio .site-band p {
 
   .edu-row__rail { display: none; }
 
-  /* Collapse long lists behind a tap target on phones */
-  .disclosure-btn { display: inline-flex; }
-
-  .edu-row__courses-label { display: none; }
-
-  .edu-courses-panel,
-  .pub-desc-panel {
-    display: none;
-    margin-top: 0.7rem;
-    padding: 1rem 1.05rem;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    box-shadow: 0 8px 24px rgba(40, 50, 90, 0.08);
-  }
-
-  .edu-courses-panel.is-open,
-  .pub-desc-panel.is-open {
-    display: block;
-  }
-
-  .pub-desc-panel .pub-desc {
-    margin: 0;
-    font-size: 0.95rem;
-  }
-
   .layout-folio .author__name,
   .layout-folio .sidebar .author__name {
     font-size: 2.6rem;
@@ -1259,3 +1239,41 @@ body.layout-folio .site-band p {
       justify-content: flex-end;
     }
   }
+
+/* ---------------------------------------------------------------
+   Phones: long lists collapse behind a tap target
+   --------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .disclosure-btn { display: inline-flex; }
+
+  .edu-row__courses-label { display: none; }
+
+  .edu-courses-panel,
+  .pub-desc-panel {
+    display: none;
+    margin-top: 0.7rem;
+    padding: 1rem 1.05rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(40, 50, 90, 0.08);
+  }
+
+  .edu-courses-panel.is-open,
+  .pub-desc-panel.is-open {
+    display: block;
+  }
+
+  .pub-desc-panel .pub-desc {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .edu-row__head {
+    flex-wrap: wrap;
+  }
+
+  .edu-row__gpa {
+    margin-left: 0;
+  }
+}

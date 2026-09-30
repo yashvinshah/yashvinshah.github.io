@@ -226,14 +226,6 @@ To **reorder sections**, cut and paste the blocks.
 
 ---
 
-## Credits
-
-- Built on [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) by [Yi Ren](https://github.com/RayeRen)
-- Based on [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) Jekyll theme by [Michael Rose](https://mademistakes.com/)
-- Mobile optimization, design layer, and template by [Ziyuan Zhao (Steven)](https://steven068zzy.github.io/stevenZYzhao.github.io/)
-
----
-
 ## License
 
 MIT License — free to use for personal and academic purposes.  

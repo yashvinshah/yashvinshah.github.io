@@ -119,7 +119,7 @@
     if (!profile || !content) return;
 
     var section = document.createElement('section');
-    section.className = 'site-section site-section--hero';
+    section.className = 'site-section site-section--alt site-section--hero';
     var old = document.getElementById('about-me');
     if (old) old.removeAttribute('id');
     section.id = 'about-me';
@@ -184,7 +184,7 @@
       }
 
       var section = document.createElement('section');
-      section.className = 'site-section' + (index % 2 === 0 ? ' site-section--alt' : '');
+      section.className = 'site-section' + (index % 2 === 1 ? ' site-section--alt' : '');
       var id = takeAnchorId(nodes);
       if (id) section.id = id;
       nodes[0].parentNode.insertBefore(section, nodes[0]);
@@ -205,7 +205,7 @@
 
   var disclosureSeq = 0;
 
-  function makeDisclosure(label, panel, hint) {
+  function makeDisclosure(label, panel) {
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'disclosure-btn';
@@ -219,12 +219,6 @@
     text.className = 'disclosure-btn__label';
     text.textContent = label;
     btn.appendChild(text);
-    if (hint) {
-      var note = document.createElement('span');
-      note.className = 'disclosure-btn__hint';
-      note.textContent = hint;
-      btn.appendChild(note);
-    }
     btn.insertAdjacentHTML('beforeend', '<i class="fas fa-chevron-down disclosure-btn__caret" aria-hidden="true"></i>');
 
     btn.addEventListener('click', function (e) {
@@ -308,6 +302,8 @@
 
       var body = document.createElement('div');
       body.className = 'edu-row__body';
+      var head = document.createElement('div');
+      head.className = 'edu-row__head';
       var school = document.createElement(schoolLink ? 'a' : 'div');
       school.className = 'edu-row__school';
       school.textContent = schoolName;
@@ -316,7 +312,14 @@
         school.target = '_blank';
         school.rel = 'noopener noreferrer';
       }
-      body.appendChild(school);
+      head.appendChild(school);
+      if (gpa) {
+        var gpaLine = document.createElement('span');
+        gpaLine.className = 'edu-row__gpa';
+        gpaLine.innerHTML = '<span class="edu-row__gpa-label">GPA</span> ' + gpa;
+        head.appendChild(gpaLine);
+      }
+      body.appendChild(head);
       if (degree) {
         var deg = document.createElement('p');
         deg.className = 'edu-row__degree';
@@ -329,12 +332,6 @@
         honorLine.className = 'edu-row__honor';
         honorLine.textContent = 'Honors in ' + honor[1];
         body.appendChild(honorLine);
-      }
-      if (gpa) {
-        var gpaLine = document.createElement('p');
-        gpaLine.className = 'edu-row__gpa';
-        gpaLine.innerHTML = '<span class="edu-row__gpa-label">GPA</span> ' + gpa;
-        body.appendChild(gpaLine);
       }
       if (place) {
         var loc = document.createElement('p');
@@ -361,7 +358,7 @@
         });
         panel.appendChild(chips);
 
-        body.appendChild(makeDisclosure('Coursework', panel, courses.length + ' courses'));
+        body.appendChild(makeDisclosure('Coursework', panel));
         body.appendChild(panel);
       }
 
@@ -955,7 +952,7 @@
         descPanel.className = 'pub-desc-panel';
         desc.parentNode.insertBefore(descPanel, desc);
         descPanel.appendChild(desc);
-        card.insertBefore(makeDisclosure('Details', descPanel, ''), descPanel);
+        card.insertBefore(makeDisclosure('Description', descPanel), descPanel);
       }
     });
   }
